@@ -35,6 +35,19 @@
     margin: 40px 0px;
     text-align: center;
 }
+@media(max-width:500px){
+    #img_profile{
+        width: 300px;
+        height:300px;
+    }
+}
+@media(max-width:350px){
+    #img_profile{
+        width: 200px;
+        height:200px;
+        
+    }
+}
 #quien_soy p{
     font-size: 27px;
     text-align: justify;
