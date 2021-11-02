@@ -6,17 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goretti</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    
-    <!--<link href="http://fonts.cdnfonts.com/css/coco-gothic" rel="stylesheet">-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> 
+    <script src="assets/js/index.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/fontello/fontello.css">    
+
     <link rel="stylesheet" href="assets/css/coco_gotic.css">
     <link rel="stylesheet" href="assets/css/estilos_index.css">
+    <link rel="shortcut icon" href="assets/imagenes/favicon.jpeg"  type="image/x-icon">
 </head>
-<body>
-    <div class="contenedor_logo" id="contenedor_logo">
-        <div class="container" >
-            <img src="assets/imagenes/logo.png" id="logo">    
+<body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="58">
+    <header id="header">
+        <div class="contenedor_logo" id="contenedor_logo" >
+            <div class="container" >
+                <img src="assets/imagenes/logo.png" id="logo">    
+                <a class="btn btn-info btn-sm download" href="assets/archivos/CV_MARIA.GORETTI.pdf" download ><i class="icon-download"></i> Download CV</a>
+                <a class="btn btn-success btn-sm whats" href="https://wa.me/+527221200576" target="_blank"><i class="icon-whatsapp"></i>7221200576</a>
+            </div>
         </div>
-    </div>
+    </header>
+    <nav class="navbar navbar-expand-sm sticky-top shadow navbar-light" id="barra">
+        <div class="container">
+         <a class="navbar-brand" href="#header" id="title_nav"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+       
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav w-100 justify-content-end">
+             <li class="nav-item">
+               <a class="nav-link" href="#quien_soy">¿Quién Soy?</a>
+             </li>            
+             <li class="nav-item">
+                <a class="nav-link" href="#fotos_trabajos">Proyectos</a>
+              </li>            
+           </ul>
+         </div>
+        </div>
+     </nav>
     
     <section id="quien_soy">
         <div class="container">
@@ -25,7 +52,7 @@
                     <img src="assets/imagenes/profile.jpeg" id="img_profile" class="shadow">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <h1 style="color:#F7F7F7; text-align: center;">Soy María Goretti Zepeda Jimenez</h1>
+                    <h1 style="color:#F7F7F7; text-align: center;">Soy María Goretti Zepeda Jiménez</h1>
                     <p>
                         Diseñadora Industrial, con énfasis en el diseño de interiores y espacios comerciales. Tengo especial interés en el diseño sustentable y diseño centrado en el usuario, me apasiona transmitir a través de los espacios diseñados, emociones y recuerdos a mis usuarios; soy una persona responsable, activa, creativa, cooperativa y trabajadora.
                     </p>
@@ -40,20 +67,122 @@
 
     <section id="fotos_trabajos">
         <div class="container">
+            <div class="row">
+                <h1 class="w-100 text-center">PROYECTOS</h1>
+            </div>
            <div class="row">
                 <div class="col-12 col-md-6"> 
                     <div class="contenedor_imagen_item_completas shadow">
-                        <img src="assets/imagenes/lolitas_place.jpeg">
+                        
+                        <button id="lolitas_place_img" class="btn image_button_modal" data-toggle="modal" data-target="#modal_lolitas_place"><img src="assets/imagenes/lolitas_place.jpeg"></button>
                         <div class="title_image_proyect">
                             <h4>Lolita's Place</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="modal fade" id="modal_lolitas_place" tabindex="-1" aria-labelledby="modal_lolitas_place_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Lolita's Place</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="m-0 p-0">
+                                        Proyecto de interiorismo para veterinaria en colaboración. <br>
+                                            Diseño de concepto, mobiliario, ambientación y distribución de espacios de una veterinaria  con Pet grooming para un inmueble ubicado en Metepec, Estado de México.
+                                    </p>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/imagen1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/imagen2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/imagen3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/imagen4.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/imagen5.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/plano1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/plano2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/lolitas/plano3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6" > 
                     <div class="contenedor_imagen_item_completas shadow">
-                        <img src="assets/imagenes/maka.jpeg">
+                        
+                        <button id="makas_img" class="btn image_button_modal" data-toggle="modal" data-target="#modal_makas"><img src="assets/imagenes/maka.jpeg"></button>
                         <div class="title_image_proyect">
                             <h4>MAKA'S</h4>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal_makas" tabindex="-1" aria-labelledby="modal_lolitas_place_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">MAKA'S</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="m-0 p-0">
+                                        Proyecto de interiorismo para veterinaria en colaboración. <br>
+                                        Diseño de concepto, mobiliario, ambientación y distribución de espacios de una veterinaria con Pet grooming y consultorios, ubicada en Malinalco, Estado de México.
+                                    </p>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen4.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen5.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen6.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen7.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/imagen8.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/plano1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/plano2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/plano3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/makas/plano4.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,9 +191,45 @@
            <div class="row">
                 <div class="col-12 col-md-6 offset-md-3" > 
                     <div class="contenedor_imagen_item_completas shadow imagen_especial">
-                        <img src="assets/imagenes/don_leo.jpeg">
+                        <button id="don_leo_img" class="btn image_button_modal" data-toggle="modal" data-target="#modal_don_leo"><img src="assets/imagenes/don_leo.jpeg"></button>
+                        
                         <div class="title_image_proyect">
-                            <h4>Vino Don Leo</h4>
+                            <h4>Vinos Don Leo</h4>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal_don_leo" tabindex="-1" aria-labelledby="modal_don_leo_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Vinos Don Leo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="m-0 p-0" style="display: inline;">
+                                        Stand Vinos Don Leo. <br>
+                                        Diseño de un Stand para la marca mexicana de Vinos Don Leo, el Congreso Enofusión '<p class="fuente_numeros">20</p>
+                                         en Madrid, en el que el objetivo era transmitir la belleza y riqueza natural del vino mexicano en tierras Españolas a través 
+                                         de elegancia y distinción, denotando el título "EL MEJOR CABERNET DEL MUNDO <p class="fuente_numeros">2020</p>".
+                                    </p>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/don_leo/imagen1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/don_leo/imagen2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/don_leo/imagen3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/don_leo/imagen4.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/don_leo/imagen5.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,34 +239,162 @@
             <div class="row contenedor_imagenes" >
                 <div class="col-12 col-md-6 col-lg-4 " > 
                     <div class="contenedor_imagen_item shadow">
-                        <img src="assets/imagenes/cortox.jpeg">
+                        
+                        <button id="cortex_img" class="btn image_button_modal" data-toggle="modal" data-target="#modal_cortex"><img src="assets/imagenes/cortox.jpeg"></button>
                         <div class="title_image_proyect">
-                            <h4>CORTOX</h4>
+                            <h4>CORTEX</h4>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal_cortex" tabindex="-1" aria-labelledby="modal_cortex_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CORTEX</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="m-0 p-0">
+                                        Embalaje para cosméticos orgánicos. <br>
+                                        Diseño de embalaje para productos cosméticos de la marca Ere Pérez, con el propósito de sustituir embalajes plásticos, para ofrecer productos sustentables y orgánicos de principio a fin.
+                                    </p>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen5.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen6.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen7.jpeg" class="image_modal_item shadow">
+                                    </div>
+
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/cortex/imagen8.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 " > 
                     <div class="contenedor_imagen_item shadow">
-                        <img src="assets/imagenes/morra.jpeg" >
+                        
+                        <button id="morra_img" class="btn image_button_modal" data-toggle="modal" data-target="#modal_morra"><img src="assets/imagenes/morra.jpeg" ></button>
                         <div class="title_image_proyect">
-                            <h4>z o t h o n d o y'o</h4>
+                            <h4>zotho ndoy'o</h4>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal_morra" tabindex="-1" aria-labelledby="modal_morra_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">zotho ndoy'o</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="m-0 p-0">
+                                        Joyería Artesanal fina. <br>
+                                        Intervención y re diseño de artesanías de hueso de toro del Estado de México,  bajo un concepto minimalista y elegante, incluyendo metales preciosos como oro y plata.
+                                    </p>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/morra/imagen1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/morra/imagen2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/morra/imagen3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/morra/imagen4.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 " > 
                     <div class="contenedor_imagen_item shadow">
-                        <img src="assets/imagenes/goran.jpeg">
+                        <button id="goran_img" class="btn image_button_modal" data-toggle="modal" data-target="#modal_goran"><img src="assets/imagenes/goran.jpeg"></button>
+                        
                         <div class="title_image_proyect">
                             <h4>GORAN</h4>
                         </div>
                     </div>
-                    
+                    <div class="modal fade" id="modal_goran" tabindex="-1" aria-labelledby="modal_goran_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">GORAN</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="m-0 p-0">
+                                        Proyecto de micromobilidad en colaboración. <br>
+                                        Diseño de un transporte personal para estudiantes que facilite el traslado del usuario aún cuando esté cargando diversos objetos personales por medio de la adecuación de accesorios o compartimentos al vehículo, buscando ocupar el menos espacio posible para su transportación cuando no esté en uso.
+                                    </p>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen1.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen2.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen3.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen4.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen6.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen5.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen7.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen8.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen9.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen10.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                    <div class="image_modal">
+                                        <img src="assets/imagenes/goran/imagen11.jpeg" class="image_modal_item shadow">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <footer class="text-center">
+        <p style="display: inline;" >Todos los derechos Reservados María Goretti Zepeda Jiménez &copy; <div class="fuente_numeros">2021</div>  </p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
