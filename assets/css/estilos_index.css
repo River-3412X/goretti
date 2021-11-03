@@ -17,6 +17,14 @@
     padding: 80px 0px;
     background-color: #F7F7F7;
 }
+#conocimiento{
+    padding: 80px 0px;
+    background-color: #F0A29A;
+}
+#contacto{
+    padding: 80px 0px;
+    background-color: #F7F7F7;
+}
 #logo{
     width: 100%;
     margin: 50px 0px;
@@ -92,7 +100,7 @@ header .whats:hover{
     background-color: #F0A29A;
 }
 .modal-body p{
-    text-align: justify;
+    text-align: justify!important;
 }
 .image_modal{
     text-align: center;
@@ -179,8 +187,20 @@ header .whats:hover{
 
 /*fin imagenes grandes*/
 
-
-
+#conocimiento ul{
+    position:relative;
+    width:100%;
+    text-align: center;
+}
+#conocimiento li{
+    font-size: 27px;
+    list-style-type: none;
+}
+@media(min-width:753px){
+    #conocimiento ul{
+        text-align: left;
+    }
+}
 
 /***********************footer*********************/
 footer{
@@ -191,4 +211,15 @@ footer{
 footer p{
     text-align: center;
     margin-bottom: 0;
+}
+
+
+/***************Alert****************/
+#alert{
+    top:60px; 
+    right:10px;
+}
+#alert .toast-header{
+    background: #3D3D3D;
+    color: #DEDCDD;
 }
