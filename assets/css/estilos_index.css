@@ -9,18 +9,15 @@
     width: 100%;
     background-color: #F7F7F7;
 }
+#proyectos{
+    padding: 80px 0px;
+    background-color: #F7F7F7;
+}
 #quien_soy{
     padding: 80px 0px;
     background-color: #F0A29A;
 }
-#fotos_trabajos{
-    padding: 80px 0px;
-    background-color: #F7F7F7;
-}
-#conocimiento{
-    padding: 80px 0px;
-    background-color: #F0A29A;
-}
+
 #contacto{
     padding: 80px 0px;
     background-color: #F7F7F7;
@@ -60,10 +57,116 @@ header .whats:hover{
 }
 /************FIN HEADER*******************/
 /************BARRA*******************************/
-#barra{
+#barra_menu_principal {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin:auto;
+    
+}
+#barra_menu_principal .contenedor_barra{
+    padding: relative;
+    text-align: center;
+}
+#barra_menu_principal .contenedor_barra ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin:0px;
+}
+#barra_menu_principal ul li{
+    display: inline;
+    margin: 0;
+}
+#barra_menu_principal ul li a{
+    position: relative;
+    color: black;
+    padding: 25px; 
+    font-size:18px;
+    background-color: white;
+    text-decoration: none;
+
+    transition-property: background, color;
+    transition-duration: 0.3s, 0.3s;
+    letter-spacing: 7px;
+}
+#barra_menu_principal ul li a:hover{
     background-color: #F0A29A;
+    color: white;
+    
+}
+@media(max-width:700px){
+    #barra_menu_principal ul li a{
+        position: relative;
+        color: black;
+        padding: 15px; 
+        font-size:12px;
+        background-color: white;
+        text-decoration: none;
+        letter-spacing: 4px;
+    }
 }
 /**************FIN BARRA*****************************/
+/* INICIO_PROYECTOS*/
+#proyectos > h1{
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+}
+#proyectos .row .col{
+    padding: 25px;
+    margin-top:80px;
+}
+#proyectos .row .col .contenedor_imagen{
+    overflow: hidden;
+}
+#proyectos .row .col img{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition-property: scale;
+    transition-duration: 1s;
+}
+
+#proyectos .row .col img:hover{
+    scale: 1.2;
+}
+#proyectos .row .col h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#proyectos .row .col h5{
+    letter-spacing: 5px;
+    margin-top: 25px;
+}
+@media(max-width:700px){
+    #proyectos > h1{
+        font-size: 20px;
+        letter-spacing: 10px;
+        margin-bottom: 15px;
+    }
+    #proyectos .row .col{
+        margin-top:40px;
+    }
+
+}
+#enlace_portafolio{
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 2px #F0A29A solid;
+    color: #F0A29A;
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-top: 25px;
+}
+#enlace_portafolio:hover{
+    color:white;
+    background-color: #F0A29A;
+}
+/*fin PROYECTOS*/
+/* inicio profile*/
+
 #container_img_profile{
     margin: auto;
     text-align: center;
@@ -95,113 +198,25 @@ header .whats:hover{
     font-size: 27px;
     text-align: justify;
 }
-/* imagenes grandes*/
-.modal-header{
-    background-color: #F0A29A;
-}
-.modal-body p{
-    text-align: justify!important;
-}
-.image_modal{
-    text-align: center;
-    width: 100%;
-    margin: 20px 0px;
-    
-}
-.image_modal_item{
-    position:relative;
-    width: 80%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.image_button_modal{
-    position: relative;
-    padding: 0px!important;
-    width: 100%;
-    height: 100%;
-}
-.contenedor_imagenes button img{
-    position:relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-}
-.contenedor_imagen_item{
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-    z-index: 0;
-    margin-bottom: 20px; 
-}
-.contenedor_imagen_item_completas{
-    
-    position: relative;
-    overflow: hidden;
-    height: 275px;
-    z-index: 0;
-    margin-bottom: 30px;
-}
-.imagen_especial{
-    height: 400px!important;
-}
-.contenedor_imagen_item_completas img, .contenedor_imagen_item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    display: block;
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, transform 0.5s;
-    transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+/* fin_profile*/
 
-}
-.contenedor_imagen_item_completas:hover img,.contenedor_imagen_item:hover img{
-    width: 100%;
-    opacity: 0.9;
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-}
-.contenedor_imagen_item_completas:hover .title_image_proyect,.contenedor_imagen_item:hover .title_image_proyect{
-    transform: translateY(-40px);
-}
-
-.title_image_proyect{
-    position: relative;
-    text-align: center;
-    padding: 5px;
-    width: 100%;
-    background-color: #f7f7f7bb;
-    z-index: 100;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-.title_image_proyect h4{
-    font-size: 30px;
-    
-}
 
 /*fin imagenes grandes*/
 
-#conocimiento ul{
-    position:relative;
-    width:100%;
-    text-align: center;
-}
-#conocimiento li{
-    font-size: 27px;
-    list-style-type: none;
-}
-@media(min-width:753px){
-    #conocimiento ul{
-        text-align: left;
-    }
+
+#contacto h3{
+    letter-spacing: 15px;
 }
 
+#contacto p{
+    font-size: 25px;
+}
+
+@media(max-width:575px){
+    #contacto .col{
+        margin-top: 80px;
+    }  
+}
 /***********************footer*********************/
 footer{
     background: #3D3D3D;
