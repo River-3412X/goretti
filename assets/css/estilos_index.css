@@ -14,8 +14,8 @@
     background-color: #F7F7F7;
 }
 #quien_soy{
-    padding: 80px 0px;
-    background-color: #F0A29A;
+    padding: 10px 0px 40px 0px;
+    background-color: #C59A95;
 }
 
 #contacto{
@@ -91,12 +91,20 @@ header .whats:hover{
     transition-duration: 0.3s, 0.3s;
     letter-spacing: 7px;
 }
-#barra_menu_principal ul li a:hover{
-    background-color: #F0A29A;
+#barra_menu_principal ul li a.active{
+    background-color: #C59A95;
     color: white;
-    
+}
+#barra_menu_principal ul li a:hover{
+    background-color: #C59A95;
+    color: white;
 }
 @media(max-width:700px){
+    #barra_menu_principal .contenedor_barra ul {
+        
+        padding: 7px;
+        margin:0px;
+    }
     #barra_menu_principal ul li a{
         position: relative;
         color: black;
@@ -154,15 +162,15 @@ header .whats:hover{
 #enlace_portafolio{
     padding: 15px 30px;
     border-radius: 20px;
-    border: 2px #F0A29A solid;
-    color: #F0A29A;
+    border: 2px #C59A95 solid;
+    color: #C59A95;
     font-size: 15px;
     letter-spacing: 5px;
     margin-top: 25px;
 }
 #enlace_portafolio:hover{
     color:white;
-    background-color: #F0A29A;
+    background-color: #C59A95;
 }
 /*fin PROYECTOS*/
 /* inicio profile*/
@@ -180,6 +188,19 @@ header .whats:hover{
     object-fit: cover;
     margin: 40px 0px;
     text-align: center;
+}
+#enlace_quienes_somos{
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 2px white solid;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-top: 25px;
+}
+#enlace_quienes_somos:hover{
+    color:#C59A95;
+    background-color: white;
 }
 @media(max-width:500px){
     #img_profile{
