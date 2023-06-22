@@ -67,6 +67,7 @@ header .whats:hover{
 #barra_menu_principal .contenedor_barra{
     padding: relative;
     text-align: center;
+    overflow: hidden;
 }
 #barra_menu_principal .contenedor_barra ul {
     position: relative;
